@@ -14,7 +14,7 @@ class SoldierController extends Controller
      */
     public function index()
     {
-        $soldiers = Soldier::all();
+        $soldiers = Soldier::with('user','awards')->get();
 
 //        dd($soldiers);
         return $soldiers;
