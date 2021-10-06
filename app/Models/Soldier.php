@@ -38,4 +38,8 @@ class Soldier extends Model
     public function awards () {
         return $this->belongsToMany(Award::class);
     }
+
+    public function galleries () {
+        return $this->morphMany(Gallery::class, 'galleryable');
+    }
 }

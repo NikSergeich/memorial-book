@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAwardUserTable extends Migration
+class CreateAwardSoldierTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAwardUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('award_user', function (Blueprint $table) {
+        Schema::create('award_soldier', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('award_id');
@@ -31,6 +31,6 @@ class CreateAwardUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('award_user');
+        Schema::dropIfExists('award_soldier');
     }
 }

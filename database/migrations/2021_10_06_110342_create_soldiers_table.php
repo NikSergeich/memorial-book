@@ -22,13 +22,13 @@ class CreateSoldiersTable extends Migration
 
             $table->string('photo');
 
-            $table->string('birthday');
-            $table->string('month_of_birth');
-            $table->string('year_of_birth');
+            $table->string('birthday',2);
+            $table->string('month_of_birth',2);
+            $table->string('year_of_birth',4);
 
-            $table->string('death_date');
-            $table->string('death_month');
-            $table->string('year_of_death');
+            $table->string('death_date',2);
+            $table->string('death_month',2);
+            $table->string('year_of_death',4);
 
             $table->longText('biography');
 
