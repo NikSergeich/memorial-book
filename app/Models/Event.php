@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Award extends Model
+class Event extends Model
 {
     use HasFactory;
 
     public function soldiers () {
-        return $this->morphedByMany(Soldier::class, 'awardable');
+        return $this->morphedByMany(Soldier::class, 'eventable');
     }
 }

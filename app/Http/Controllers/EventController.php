@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Soldier;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
-class SoldierController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,7 @@ class SoldierController extends Controller
      */
     public function index()
     {
-        $soldiers = Soldier::with('user','events','awards','galleries')->get();
-
-//        dd($soldiers);
-        return $soldiers;
+        //
     }
 
     /**
@@ -44,10 +41,10 @@ class SoldierController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Soldier  $soldier
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Soldier $soldier)
+    public function show(Event $event)
     {
         //
     }
@@ -55,10 +52,10 @@ class SoldierController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Soldier  $soldier
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Soldier $soldier)
+    public function edit(Event $event)
     {
         //
     }
@@ -67,10 +64,10 @@ class SoldierController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Soldier  $soldier
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Soldier $soldier)
+    public function update(Request $request, Event $event)
     {
         //
     }
@@ -78,10 +75,10 @@ class SoldierController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Soldier  $soldier
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Soldier $soldier)
+    public function destroy(Event $event)
     {
         //
     }

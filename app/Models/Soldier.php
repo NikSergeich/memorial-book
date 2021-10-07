@@ -31,15 +31,23 @@ class Soldier extends Model
         return "{$this->death_date}.{$this->death_month}.{$this->year_of_death}";
     }
 
+    // Участник событий
+    public function events() {
+        return $this->morphToMany(Event::class,'eventable');
+    }
+
+    // Пользователь, создавший запись
     public function user () {
         return $this->belongsTo(User::class);
     }
 
+    // Награды
     public function awards () {
-        return $this->morphToMany(Award::class, 'awardable');
+        return $this->morphToMany(Award::class,'awardable');
     }
 
+    // Фотогалерея
     public function galleries () {
-        return $this->morphMany(Gallery::class, 'galleryable');
+        return $this->morphMany(Gallery::class,'galleryable');
     }
 }

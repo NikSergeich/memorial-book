@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAwardablesTable extends Migration
+class CreateEventablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateAwardablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('awardables', function (Blueprint $table) {
+        Schema::create('eventables', function (Blueprint $table) {
 //            $table->id();
-
-            $table->unsignedBigInteger('award_id');
-            $table->unsignedBigInteger('awardable_id');
-            $table->string('awardable_type');
-
-            $table->boolean('posthumously');
+            $table->unsignedBigInteger('event_id');
+            $table->unsignedBigInteger('eventable_id');
+            $table->string('eventable_type');
         });
     }
 
@@ -31,6 +28,6 @@ class CreateAwardablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('awardables');
+        Schema::dropIfExists('eventables');
     }
 }
