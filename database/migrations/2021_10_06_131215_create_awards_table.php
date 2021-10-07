@@ -18,7 +18,6 @@ class CreateAwardsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('image');
-            $table->boolean('posthumously');
 
             $table->timestamps();
         });

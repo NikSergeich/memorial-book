@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAwardSoldierTable extends Migration
+class CreateAwardablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateAwardSoldierTable extends Migration
      */
     public function up()
     {
-        Schema::create('award_soldier', function (Blueprint $table) {
+        Schema::create('awardables', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('award_id');
-            $table->foreign('award_id')->references('id')->on('awards');
+            $table->unsignedBigInteger('awardable_id');
+            $table->string('awardable_type');
 
-            $table->unsignedBigInteger('soldier_id');
-            $table->foreign('soldier_id')->references('id')->on('soldiers');
+            $table->boolean('posthumously');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateAwardSoldierTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('award_soldier');
+        Schema::dropIfExists('awardables');
     }
 }

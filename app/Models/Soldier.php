@@ -36,7 +36,7 @@ class Soldier extends Model
     }
 
     public function awards () {
-        return $this->belongsToMany(Award::class);
+        return $this->morphToMany(Award::class, 'awardable');
     }
 
     public function galleries () {
