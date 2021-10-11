@@ -32,12 +32,19 @@
                 </div>
             </div>
 
-            <div v-if="soldier.biography.length">
-                <h1 class="font-merriweather text-3xl italic pb-2">Биография</h1>
-                <div class="text-xl">
-                    {{ soldier.biography }}
+            <div>
+                <div v-if="soldier.biography.length">
+                    <h1 class="font-merriweather text-3xl italic pb-2">Биография</h1>
+                    <div class="text-xl">
+                        {{ soldier.biography }}
+                    </div>
+                </div>
+                <div v-else class="text-xl">
+                    <h1 class="font-merriweather text-3xl italic pb-2">Биография</h1>
+                    <div class="text-xl">Сведения о биографии отсутствуют</div>
                 </div>
             </div>
+
 
         </div>
     </Layout>

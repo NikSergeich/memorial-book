@@ -3,7 +3,7 @@
         <Head title="Книга памяти" />
 
         <div class="flex flex-col space-y-6">
-            <div v-for="soldier in soldiers" class="group flex space-x-6 hover:bg-gray-100 hover:rounded-md">
+            <div v-for="soldier in soldiers" class="group flex space-x-6 hover:bg-yellow-100 hover:rounded-md">
                 <div class="w-44">
                     <div class="aspect-w-3 aspect-h-4">
                         <img class="w-full object-cover rounded-md group-hover:scale-105 delay-50 duration-200 ease-in-out" :src="soldier.photo || 'https://pamyat-naroda.ru/local/templates/pn/image/avatar.svg'">
