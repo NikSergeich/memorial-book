@@ -4,83 +4,58 @@ namespace App\Http\Controllers;
 
 use App\Models\Soldier;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class SoldierController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $soldiers = Soldier::with('user','events','awards','galleries')->get();
-
-//        dd($soldiers);
-        return $soldiers;
+        return Inertia::render('Soldiers/Index', [
+            'soldiers' => Soldier::all(
+                'id',
+                'last_name',
+                'first_name',
+                'patronymic',
+                'birthday',
+                'month_of_birth',
+                'year_of_birth',
+                'death_date',
+                'death_month',
+                'year_of_death',
+                'photo'
+            )
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Soldier  $soldier
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Soldier $soldier)
+    public function show($id)
     {
-        //
+//         $soldier = Soldier::with('user','events','awards','galleries')->findOrFail($id);
+//        return $soldier;
+         return Inertia::render('Soldiers/Show', [
+             'soldier' => Soldier::with('user','events','awards','galleries')->findOrFail($id),
+         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Soldier  $soldier
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Soldier $soldier)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Soldier  $soldier
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Soldier $soldier)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Soldier  $soldier
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Soldier $soldier)
     {
         //

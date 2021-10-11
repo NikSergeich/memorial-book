@@ -10,19 +10,19 @@ class Soldier extends Model
     use HasFactory;
 
     protected $hidden = [
-        'birthday',
-        'month_of_birth',
-        'year_of_birth',
-        'death_date',
-        'death_month',
-        'year_of_death',
+//        'birthday',
+//        'month_of_birth',
+//        'year_of_birth',
+//        'death_date',
+//        'death_month',
+//        'year_of_death',
     ];
 
     protected $appends = [
-        'date_of_birth',
-        'date_of_death'
+//        'date_of_birth',
+//        'date_of_death'
     ];
-
+/*
     public function getDateOfBirthAttribute() {
         return "{$this->birthday}.{$this->month_of_birth}.{$this->year_of_birth}";
     }
@@ -30,7 +30,7 @@ class Soldier extends Model
     public function getDateOfDeathAttribute() {
         return "{$this->death_date}.{$this->death_month}.{$this->year_of_death}";
     }
-
+*/
     // Участник событий
     public function events() {
         return $this->morphToMany(Event::class,'eventable');
