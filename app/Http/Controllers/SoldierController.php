@@ -29,7 +29,7 @@ class SoldierController extends Controller
 
     public function create()
     {
-        //
+        return Inertia::render('Soldiers/Create');
     }
 
     public function store(Request $request)
