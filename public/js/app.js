@@ -26022,45 +26022,46 @@ var _hoisted_7 = {
   "class": "flex flex-col space-y-3 my-auto h-full w-full"
 };
 var _hoisted_8 = {
-  "class": "font-merriweather text-5xl italic"
+  "class": "font-merriweather text-5xl italic tracking-wider"
 };
 var _hoisted_9 = {
-  key: 0
+  "class": "text-xl"
 };
 var _hoisted_10 = {
-  key: 1
+  key: 0
 };
 var _hoisted_11 = {
+  key: 1
+};
+var _hoisted_12 = {
   key: 0
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "font-merriweather text-3xl italic pb-2"
 }, "Биография", -1
 /* HOISTED */
 );
 
-var _hoisted_13 = {
-  "class": "text-xl"
-};
-var _hoisted_14 = {
+var _hoisted_14 = ["innerHTML"];
+var _hoisted_15 = {
   key: 1,
   "class": "text-xl"
 };
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "font-merriweather text-3xl italic pb-2"
 }, "Биография", -1
 /* HOISTED */
 );
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "text-xl"
 }, "Сведения о биографии отсутствуют", -1
 /* HOISTED */
 );
 
-var _hoisted_17 = [_hoisted_15, _hoisted_16];
+var _hoisted_18 = [_hoisted_16, _hoisted_17];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
 
@@ -26081,13 +26082,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.patronymic), 1
       /* TEXT */
-      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [$props.soldier.year_of_birth && $props.soldier.year_of_birth.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_9, " Дата рождения: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.birthday || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.month_of_birth || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.year_of_birth || '____'), 1
+      )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [$props.soldier.year_of_birth && $props.soldier.year_of_birth.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, " Дата рождения: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.birthday || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.month_of_birth || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.year_of_birth || '____'), 1
       /* TEXT */
-      )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.soldier.year_of_death && $props.soldier.year_of_death.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, " Дата смерти: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.death_date || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.death_month || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.year_of_death || '____'), 1
+      )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.soldier.year_of_death && $props.soldier.year_of_death.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, " Дата смерти: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.death_date || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.death_month || '__') + "." + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.year_of_death || '____'), 1
       /* TEXT */
-      )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [$props.soldier.biography && $props.soldier.biography.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.soldier.biography), 1
-      /* TEXT */
-      )])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_14, _hoisted_17))])])];
+      )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [$props.soldier.biography && $props.soldier.biography.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+        "class": "text-xl leading-relaxed text-justify",
+        innerHTML: $props.soldier.biography
+      }, null, 8
+      /* PROPS */
+      , _hoisted_14)])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_15, _hoisted_18))])])];
     }),
     _: 1
     /* STABLE */
@@ -26265,7 +26269,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Contact");
 
 var _hoisted_4 = {
-  "class": "max-w-screen-xl mx-auto px-4 py-6 rounded-lg"
+  "class": "max-w-screen-lg mx-auto px-4 py-6 rounded-lg"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
