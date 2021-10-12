@@ -1,13 +1,31 @@
 <template>
-    <main>
+    <main class="">
         <header>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+            <div class="bg-red-700 text-white shadow-lg">
+                <div class="max-w-screen-xl mx-auto h-14 flex items-center text-lg">
+                    <div class="flex space-x-4">
+                        <Link href="/">Home</Link>
+                        <Link href="/soldiers">Soldiers</Link>
+                    </div>
+                </div>
+            </div>
+
+
         </header>
-        <article class="max-w-screen-lg mx-auto px-4 py-6 rounded-lg">
+
+        <div class="max-w-screen-lg mx-auto px-4 py-6 rounded-lg">
             <slot />
-        </article>
+        </div>
+
+        <footer class="">
+            <div class="bg-gray-800 text-white">
+                <div class="max-w-screen-xl mx-auto h-14 flex items-center text-lg">
+                    <div>
+                        &copy; Dev project
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 </template>
 
