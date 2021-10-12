@@ -72,11 +72,11 @@
                             Биография
                         </div>
                         <div>
-                            <textarea v-model="soldierForm.biography"></textarea>
+                            <textarea class="w-full" rows="8" v-model="soldierForm.biography"></textarea>
                         </div>
                     </div>
                     <div>
-                        <button type="submit" :disabled="soldierForm.processing">Добавить</button>
+                        <button type="submit" class="bg-indigo-500 text-white rounded-lg px-4 py-2" :disabled="soldierForm.processing">Добавить</button>
                     </div>
                 </div>
             </form>
@@ -108,6 +108,7 @@ export default {
             death_date: null,
             death_month: null,
             year_of_death: null,
+            biography: null,
         })
         return { soldierForm }
     },
