@@ -72,7 +72,16 @@
                             Биография
                         </div>
                         <div>
-                            <textarea class="w-full" rows="8" v-model="soldierForm.biography"></textarea>
+                            <editor
+                                api-key="no-api-key"
+                                :init="{
+                                  menubar: false,
+                                  language : 'ru',
+                                  plugins: 'lists link',
+                                  toolbar: 'styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link image emoticons'
+                                }"
+                                v-model="soldierForm.biography"
+                            />
                         </div>
                     </div>
                     <div>
@@ -88,6 +97,7 @@
 <script>
 import Layout from "@/Shared/Layout"
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3'
+import Editor from '@tinymce/tinymce-vue'
 
 export default {
     components: {
@@ -95,6 +105,7 @@ export default {
         Link,
         useForm,
         Layout,
+        Editor
     },
     setup () {
         const soldierForm = useForm({
@@ -111,6 +122,9 @@ export default {
             biography: null,
         })
         return { soldierForm }
+    },
+    mounted() {
+
     },
     methods: {
         store () {

@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^4.0.5",
-        "@tailwindcss/aspect-ratio": "^0.3.0"
+        "@tailwindcss/aspect-ratio": "^0.3.0",
+        "@tinymce/tinymce-vue": "^4.0.4"
     }
 }

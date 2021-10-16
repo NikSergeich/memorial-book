@@ -33,9 +33,6 @@ export default defineComponent({
     components: {
         Fancybox
     },
-    mounted() {
-
-    },
     props: {
         items: Object
     }
