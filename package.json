@@ -26,6 +26,7 @@
         "vue-loader": "^16.1.2"
     },
     "dependencies": {
+        "@fancyapps/ui": "^4.0.5",
         "@tailwindcss/aspect-ratio": "^0.3.0"
     }
 }
