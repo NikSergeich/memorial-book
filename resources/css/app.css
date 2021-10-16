@@ -4,6 +4,6 @@
 
 @layer utilities {
     p {
-        @apply pb-3;
+        /*@apply pb-3;*/
     }
 }
