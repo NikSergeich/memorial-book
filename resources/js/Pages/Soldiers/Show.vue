@@ -4,7 +4,7 @@
 
 
 
-        <div class="flex flex-col space-y-8">
+        <div class="flex flex-col space-y-4">
 
             <div class="max-w-screen-lg mx-auto">
                 <div class="flex space-x-8">
@@ -35,7 +35,7 @@
             <div>
                 <div v-if="soldier.biography && soldier.biography.length > 0">
                     <h1 class="font-merriweather text-3xl italic pb-3">Биография</h1>
-                    <div class="text-lg leading-relaxed text-justify" v-html="soldier.biography">
+                    <div class="text-lg leading-relaxed text-justify flex flex-col space-y-3" v-html="soldier.biography">
 
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-
+            <gallery :items="soldier.galleries"></gallery>
         </div>
     </Layout>
 </template>
@@ -53,11 +53,13 @@
 <script>
 import Layout from "@/Shared/Layout"
 import { Head } from '@inertiajs/inertia-vue3'
+import Gallery from "@/Components/Gallery";
 
 export default {
     components: {
         Head,
         Layout,
+        Gallery
     },
     props: {
         soldier: Object
