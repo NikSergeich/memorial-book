@@ -45,6 +45,8 @@
                 </div>
             </div>
 
+            <awards :items="soldier.awards"></awards>
+
             <gallery :items="soldier.galleries"></gallery>
         </div>
     </Layout>
@@ -53,12 +55,14 @@
 <script>
 import Layout from "@/Shared/Layout"
 import { Head } from '@inertiajs/inertia-vue3'
+import Awards from "@/Components/Awards";
 import Gallery from "@/Components/Gallery";
 
 export default {
     components: {
         Head,
         Layout,
+        Awards,
         Gallery
     },
     props: {
